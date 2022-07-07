@@ -29,7 +29,7 @@ void rav_push_arr(vector *vec, int *arr) {
 }
 
 int len(vector* vec) {
-	// todo
+	return vec->length;
 }
 
 int index_of(vector* vec, int x) {
