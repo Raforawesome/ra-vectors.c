@@ -5,8 +5,8 @@
 
 struct vector {
 	int* start;
-	unsigned long length;
-	unsigned long slots;
+	int length;
+	int slots;
 };
 
 typedef struct vector vector;
