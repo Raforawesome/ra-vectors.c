@@ -26,6 +26,6 @@ int index_of(vector*, int);
 
 int value_at(vector*, unsigned int);
 
-char* to_string(vector*, char*);
+char* rav_to_string(vector*, char*);
 
 #endif

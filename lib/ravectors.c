@@ -58,7 +58,7 @@ int value_at(vector* vec, unsigned int idx) {
 	return(*(vec->start + idx));
 }
 
-char* to_string(vector* vec, char* buffer) {
+char* rav_to_string(vector* vec, char* buffer) {
 	sprintf(buffer, "{");
 	for (int i = 0; i < vec->length; i++) {
 		if (i < vec->length - 1) {
