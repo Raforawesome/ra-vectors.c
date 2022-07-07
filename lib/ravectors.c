@@ -41,11 +41,11 @@ void rav_push_arr(vector *vec, int arr[], int size) {
 	}
 }
 
-int len(vector* vec) {
+int rav_len(vector* vec) {
 	return vec->length;
 }
 
-int index_of(vector* vec, int x) {
+int rav_index_of(vector* vec, int x) {
 	for (int i = 0; i < vec->length; i++) {
 		if (*(vec->start + i) == x) {
 			return i;
@@ -54,7 +54,7 @@ int index_of(vector* vec, int x) {
 	return -1;
 }
 
-int value_at(vector* vec, unsigned int idx) {
+int rav_value_at(vector* vec, unsigned int idx) {
 	return(*(vec->start + idx));
 }
 
@@ -62,9 +62,9 @@ char* rav_to_string(vector* vec, char* buffer) {
 	sprintf(buffer, "{");
 	for (int i = 0; i < vec->length; i++) {
 		if (i < vec->length - 1) {
-			sprintf(buffer, "%d, ", value_at(vec, i));
+			sprintf(buffer, "%d, ", rav_value_at(vec, i));
 		} else {
-			sprintf(buffer, "%d", value_at(vec, i));
+			sprintf(buffer, "%d", rav_value_at(vec, i));
 		}
 	}
 	sprintf(buffer, "}");

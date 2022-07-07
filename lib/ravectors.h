@@ -20,11 +20,11 @@ void rav_push(vector*, int);
 
 void rav_push_arr(vector*, int arr[], int size);
 
-int len(vector*);
+int rav_len(vector*);
 
-int index_of(vector*, int);
+int rav_index_of(vector*, int);
 
-int value_at(vector*, unsigned int);
+int rav_value_at(vector*, unsigned int);
 
 char* rav_to_string(vector*, char*);
 
