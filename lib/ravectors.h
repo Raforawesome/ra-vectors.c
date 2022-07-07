@@ -24,4 +24,6 @@ int len(vector*);
 
 int index_of(vector*, int);
 
+char* to_string(vector*);
+
 #endif
