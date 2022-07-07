@@ -21,7 +21,11 @@ vector vector_with_capacity(int cap) {
 }
 
 void rav_push(vector *vec, int x) {
-	// todo
+	if (vec->length >= vec->cap) {
+		vec->start = realloc(vec->start, vec->cap + RAV_MEM_STEP);
+	}
+	*(vec->start + 1) = x;
+	vec->length += 1;
 }
 
 void rav_push_arr(vector *vec, int *arr) {
