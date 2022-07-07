@@ -1,5 +1,12 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "ravectors.h"
+
+
+int int_len(int n) {
+	return floor(log10(abs(n)));
+}
 
 
 vector new_vector() {
@@ -45,4 +52,21 @@ int index_of(vector* vec, int x) {
 		}
 	}
 	return -1;
+}
+
+int value_at(vector* vec, unsigned int idx) {
+	return(*(vec->start + idx));
+}
+
+char* to_string(vector* vec, char* buffer) {
+	sprintf(buffer, "{");
+	for (int i = 0; i < vec->length; i++) {
+		if (i < vec->length - 1) {
+			sprintf(buffer, "%d, ", value_at(vec, i));
+		} else {
+			sprintf(buffer, "%d", value_at(vec, i));
+		}
+	}
+	sprintf(buffer, "}");
+	return buffer;
 }
