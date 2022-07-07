@@ -1,6 +1,6 @@
 #ifndef _RA_VECTORS
 
-#define MEM_STEP 10  // The amount of slots allocated when we run out
+#define RAV_MEM_STEP 10  // The amount of slots allocated when we run out
 
 
 struct vector {
