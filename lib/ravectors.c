@@ -31,15 +31,8 @@ void rav_push(vector *vec, int x) {
 	if (vec->length >= vec->cap) {
 		vec->start = realloc(vec->start, vec->cap + RAV_MEM_STEP);
 	}
-	if (vec->length == 0) {
-		*vec->start = x;
-		vec->length += 1;
-	} else if (vec->length == 1) {
-		*(vec->start + vec->length) = x;
-	} else {
-		vec->length += 1;
-		*(vec->start + vec->length) = x;
-	}
+	*(vec->start + vec->length) = x;
+	vec->length += 1;
 }
 
 void rav_push_arr(vector *vec, int arr[], int size) {
