@@ -18,7 +18,7 @@ vector vector_with_capacity(int);
 
 void rav_push(vector*, int);
 
-void rav_push_arr(vector*, int arr[]);
+void rav_push_arr(vector*, int arr[], int size);
 
 int len(vector*);
 
