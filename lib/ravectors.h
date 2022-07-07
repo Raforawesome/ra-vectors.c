@@ -6,7 +6,7 @@
 struct vector {
 	int* start;
 	int length;
-	int slots;
+	int cap;
 };
 
 typedef struct vector vector;
