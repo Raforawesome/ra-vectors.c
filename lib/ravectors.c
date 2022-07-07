@@ -3,11 +3,21 @@
 
 
 vector new_vector() {
-	// todo
+	int* block = malloc(sizeof(int) * RAV_MEM_STEP);
+	vector new_vec;
+	new_vec.start = block;
+	new_vec.length = 0;
+	new_vec.cap = RAV_MEM_STEP;
+	return new_vec;
 }
 
 vector vector_with_capacity(int cap) {
-	// todo
+	int* block = malloc(sizeof(int) * cap);
+	vector new_vec;
+	new_vec.start = block;
+	new_vec.length = 0;
+	new_vec.cap = cap;
+	return new_vec;
 }
 
 void rav_push(vector *vec, int x) {
