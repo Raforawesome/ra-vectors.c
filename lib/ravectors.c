@@ -28,8 +28,10 @@ void rav_push(vector *vec, int x) {
 	vec->length += 1;
 }
 
-void rav_push_arr(vector *vec, int *arr) {
-	// todo
+void rav_push_arr(vector *vec, int arr[], int size) {
+	for (int i = 0; i < size; i++) {
+		rav_push(vec, arr[i]);
+	}
 }
 
 int len(vector* vec) {
