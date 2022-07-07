@@ -9,15 +9,17 @@ struct vector {
 	unsigned long slots;
 };
 
+typedef struct vector vector;
+
 
 vector new_vector();
 
-void rav_push(vector* vec, int x);
+void rav_push(vector*, int);
 
-void rav_push_arr(vector* vec, int arr[]);
+void rav_push_arr(vector*, int arr[]);
 
-int len(vector* vec);
+int len(vector*);
 
-int index_of(vector* vec, int x);
+int index_of(vector*, int);
 
 #endif
