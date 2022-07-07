@@ -30,6 +30,7 @@ vector vector_with_capacity(int cap) {
 void rav_push(vector *vec, int x) {
 	if (vec->length >= vec->cap) {
 		vec->start = realloc(vec->start, vec->cap + RAV_MEM_STEP);
+		vec->cap += RAV_MEM_STEP;
 	}
 	*(vec->start + vec->length) = x;
 	vec->length += 1;
