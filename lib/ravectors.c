@@ -35,8 +35,8 @@ void rav_push(vector *vec, int x) {
 		*vec->start = x;
 		vec->length += 1;
 	} else {
-		*(vec->start + 1) = x;
 		vec->length += 1;
+		*(vec->start + vec->length) = x;
 	}
 }
 
