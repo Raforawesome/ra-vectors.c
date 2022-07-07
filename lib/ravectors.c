@@ -33,5 +33,10 @@ int len(vector* vec) {
 }
 
 int index_of(vector* vec, int x) {
-	// todo
+	for (int i = 0; i < vec->length; i++) {
+		if (*(vec->start + i) == x) {
+			return i;
+		}
+	}
+	return -1;
 }
