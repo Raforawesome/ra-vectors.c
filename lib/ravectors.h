@@ -14,6 +14,8 @@ typedef struct vector vector;
 
 vector new_vector();
 
+vector vector_with_capacity(int);
+
 void rav_push(vector*, int);
 
 void rav_push_arr(vector*, int arr[]);

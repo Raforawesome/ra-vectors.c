@@ -6,6 +6,10 @@ vector new_vector() {
 	// todo
 }
 
+vector vector_with_capacity(int cap) {
+	// todo
+}
+
 void rav_push(vector *vec, int x) {
 	// todo
 }
